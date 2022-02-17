@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Josefin+Sans:wght@100;200;400&family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="src/style.css" />
     <title>Weather App</title>
@@ -50,21 +51,20 @@
               <h1 id="city">New York</h1>
               <ul>
                 <li>last updated: <span id="date"></span></li>
-                <li id="description">clear</li>
+                <li id="description"></li>
               </ul>
             </div>
             <div class="row">
               <div class="col-6">
-                <div class="clearfix weather-temperature">
+                <div class="weather-temperature">
                   <img
                     src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
                     alt="Clear"
                     id="icon"
-                    class="float-left"
                   />
-                  <div class="float-left">
-                    <strong id="temperature">19</strong
-                    ><span class="units"> °C</span>
+                  <div class="temp">
+                    <strong id="temperature"></strong
+                    ><span class="units">°C</span>
                   </div>
                 </div>
               </div>

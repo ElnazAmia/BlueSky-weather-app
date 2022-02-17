@@ -18,7 +18,7 @@ li {
   list-style: none;
   padding: 0;
   margin: 0;
-
+  text-transform: capitalize;
   color: rgb(135, 135, 135);
   font-size: 24px;
   font-weight: 300;
@@ -33,7 +33,11 @@ li {
 .overview {
   margin-bottom: 20px;
 }
+.weather-temperature {
+  display: flex;
 
+  align-items: center;
+}
 .weather-temperature img {
   margin-right: 5px;
   height: 78px;
