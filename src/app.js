@@ -1,13 +1,11 @@
 function formatDate(timestamp) {
   let date = new Date(timestamp);
-
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
   let day = days[date.getDay()];
   let hours = date.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
   }
-
   let minutes = date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
@@ -29,9 +27,15 @@ function showTemp(response) {
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 let apiKey = "f0ff64afa8957098b6eda5ad96796c19";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=tehran&appid=${apiKey}&units=metric`;
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=tabriz&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(showTemp);
