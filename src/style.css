@@ -58,12 +58,11 @@ li:first-letter {
   top: -34px;
 }
 
-.weather-temperature .active{
-  color: rgb(33, 33, 33) ;
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
   cursor: default;
-
 }
-.weather-temperature .active:hover{
+.weather-temperature .active:hover {
   text-decoration: none;
 }
 
@@ -78,5 +77,8 @@ li:first-letter {
 }
 #fahrenheit-link,
 #celisius-link {
+  text-decoration: none;
+}
+#src-link {
   text-decoration: none;
 }
