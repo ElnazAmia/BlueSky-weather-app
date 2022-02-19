@@ -57,6 +57,16 @@ li:first-letter {
   font-size: 16px;
   top: -34px;
 }
+
+.weather-temperature .active{
+  color: rgb(33, 33, 33) ;
+  cursor: default;
+
+}
+.weather-temperature .active:hover{
+  text-decoration: none;
+}
+
 #first-box,
 #second-box {
   padding: 20px;
@@ -65,4 +75,8 @@ li:first-letter {
 }
 #second-box {
   margin-top: 15px;
+}
+#fahrenheit-link,
+#celisius-link {
+  text-decoration: none;
 }
